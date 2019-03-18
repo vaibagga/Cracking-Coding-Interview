@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+
+// utility for printing matrix
 void printMat(int **a, int m, int n){
   for (int i = 0; i < m; i++){
     for (int j = 0; j < n; j++)
@@ -9,23 +11,19 @@ void printMat(int **a, int m, int n){
   }
 }
 
+// swaping utility
 void swap(int *a, int *b){
   int temp = *a;
   *a = *b;
   *b = temp;
 }
 
+// transposition folowed by rotating
 void invert(int **a, int m, int n){
-/*  for (int i = 0; i < m/2; i++){
-      for (int j = 0; j < n/2; j++){
-        swap(&a[i][j], &a[j][i]);
-      }
-    }
-  */
   for (int i = 0; i < m; i++){
     for (int j = 0; j < n; j++){
       if (i < j)
-      swap(&a[i][j], &a[j][i]);
+        swap(&a[i][j], &a[j][i]);
     }
   }
     for (int j = 0; j < n/2; j++){

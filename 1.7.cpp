@@ -1,6 +1,8 @@
 // set entire row col to 0
 #include <bits/stdc++.h>
 using namespace std;
+
+// usitlity for printing matrix
 void printMat(int **a, int m, int n){
   for (int i = 0; i < m; i++){
     for (int j = 0; j < n; j++)
@@ -9,9 +11,10 @@ void printMat(int **a, int m, int n){
   }
 }
 
+
 void setToZero(int **a, int m, int n){
-  set <int> rows;
-  set <int> cols;
+  unordered_set <int> rows;
+  unordered_set <int> cols;
   for (int i = 0; i < m; i++){
     for (int j = 0; j < n; j++){
       if (a[i][j] == 0){

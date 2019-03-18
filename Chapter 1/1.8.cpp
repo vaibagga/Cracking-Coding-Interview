@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// issubstring method
 bool isSubstring(string s1, string s2){ //s1 is substring of s2
   int m = s1.length();
   int n = s2.length();

@@ -4,10 +4,9 @@ using namespace std;
 #define LINKED_LIST
 
 class Node{
-	private:
+	public:
 		Node* next;
 		int data;
-	public:
 		Node(int);
 		void printList();
 		Node* addToHead(int);

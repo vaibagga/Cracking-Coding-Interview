@@ -1,9 +1,14 @@
 #include <stdio.h>
+
+
+// to find length of a string
 int len(char *str){
   int ans = 0;
   for (; str[ans] != '\0'; ans++);
   return ans;
 }
+
+// reverse string inplace
 void reverse(char *str){
   int n = len(str);
   int i = 0, j = n - 1;
@@ -16,6 +21,7 @@ void reverse(char *str){
   }
 
 }
+
 
 int main(){
   int t;

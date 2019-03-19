@@ -3,19 +3,24 @@
 using namespace std;
 
 Node* removeDuplicates(Node* head){
-	Node* temp = head;
+	if (head == NULL || head -> next == NULL)
+		return head;
+	Node* prev = head;
+	Node* curr = head -> next;
 	unordered_set <int> values;
-	if (temp == NULL || temp -> next == NULL)
-		return temp;
-	while (temp -> next != NULL){
-		if (values.find(temp -> next -> data) == values.end()){
-			values.insert(temp -> data);
-			temp = temp -> next;
+	values.insert(head -> data);
+	while (curr){
+		if (values.find(curr -> data) != values.end()){
+			curr = curr -> next;
 		}
 		else{
-			temp -> next = temp -> next -> next;
+			values.insert(curr -> data);
+			prev -> next = curr;
+			curr = curr -> next;
+			prev = prev -> next;
 		}
 	}
+	prev -> next= NULL;
 	return head;
 
 }

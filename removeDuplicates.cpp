@@ -22,7 +22,35 @@ Node* removeDuplicates(Node* head){
 	}
 	prev -> next= NULL;
 	return head;
+}
 
+
+Node* removeDuplicates2(Node* head){
+	if (head == NULL || head -> next == NULL)
+		return head;
+	Node* prev = head;
+	Node* curr = head -> next;
+	while (curr){
+		bool found = false;
+		Node* temp = head;
+		while (temp != curr && temp != NULL){
+			if (temp -> data == curr -> data){
+				found = true;
+				break;
+			}
+			temp = temp -> next;
+		}
+		if (found){
+			curr = curr -> next;
+		}
+		else{
+			prev -> next = curr;
+			curr = curr -> next;
+			prev = prev -> next;
+		}
+	}
+	prev -> next= NULL;
+	return head;
 }
 
 
@@ -35,7 +63,8 @@ int main(){
 	list = list->addToTail(3);
 	list = list->addToTail(4);
 	list->printList();
-	list = removeDuplicates(list);
+	cout << "\n";
+	list = removeDuplicates2(list);
 	list->printList();
 	return 0;
 }

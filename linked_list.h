@@ -11,6 +11,7 @@ class Node{
 		void printList();
 		Node* addToHead(int);
 		Node* addToTail(int);
+		friend int length(Node*);
 
 };
 
@@ -41,6 +42,12 @@ Node* Node :: addToTail(int val){
 		temp = temp -> next;
 	temp -> next = temp2;
 	return this;
+}
+
+int length(Node* head){
+	if (head == NULL)
+		return 0;
+	return 1 + length(head -> next);
 }
 
 /*

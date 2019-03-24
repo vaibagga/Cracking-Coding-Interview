@@ -34,7 +34,6 @@ void levelOrder(BinaryTree* root) {
     queue <BinaryTree*> q;
     if (root)
         return;
-    vector <vector <int> > ans;
     while (!q.empty()){
         int n = q.size();
         vector <int> curr;

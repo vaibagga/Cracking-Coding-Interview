@@ -1,13 +1,12 @@
-#ifndef binarytree
+#ifndef binary_tree
 
-#define binarytree
+#define binary_tree
 
-class BinaryTree(){
-	private:
+class BinaryTree{
+	public:
 		BinaryTree* left;
 		BinaryTree* right;
 		int data;
-	public:
 		BinaryTree(int);
 		int getValue();
 };

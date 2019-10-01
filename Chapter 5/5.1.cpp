@@ -9,6 +9,7 @@ int setBit(int N, int M, int i, int j){
 	int right = (1 << i - 1);
 	int  mask = right | left;
 	return (n & mask) | (m << i);
+	int  mask = right | left;
 }
 
 int main(){}

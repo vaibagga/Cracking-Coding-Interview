@@ -12,11 +12,4 @@ int setBit(int N, int M, int i, int j){
 	int  mask = right | left;
 }
 
-int main(){
-int a,b,c,d;
-	a=1;
-	b=2;
-	c=a+b;
-	return a+b;
-return 0;
-}
+

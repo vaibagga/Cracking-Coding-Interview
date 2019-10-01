@@ -12,4 +12,4 @@ int setBit(int N, int M, int i, int j){
 	int  mask = right | left;
 }
 
-int main(){}
+

@@ -12,9 +12,9 @@ bool allUnique(string s){
 
 int main(){
   int t;
+  char s[10000];
   cin >> t;
   while (t--){
-    string s;
     cin >> s;
     cout << allUnique(s) << endl;
   }

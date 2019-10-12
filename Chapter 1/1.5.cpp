@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #include <unordered_set>
+#include<vector.h>
 using namespace std;
 
 
@@ -17,13 +18,13 @@ void replaceSpaces(string &s){
 
 
 int main(){
-  int t;
+  int t=0;
   cin >> t;
   while (t--){
-    string s;
-    getline(cin, s);
-    replaceSpaces(s);
-    cout << s << endl;
+      string s;
+      getline(cin, s);
+      replaceSpaces(s);
+      cout << s << endl;
   }
   return 0;
 }

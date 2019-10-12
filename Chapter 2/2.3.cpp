@@ -23,5 +23,6 @@ int main(){
 	cout << endl;
 	list = deleteMiddle(list, list -> next -> next -> next);
 	list -> printList();
+	cout << endl;
 	return 0;
 }

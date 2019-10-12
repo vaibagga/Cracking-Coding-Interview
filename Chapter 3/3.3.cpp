@@ -4,10 +4,10 @@
 using namespace std;
 
 class SetOfStacks{
-  int capacity;  //max capacity after which new stack is formed
-  int maxCols;
-  int topCol; //the column of the stack
-  int topRow;
+  int capacity=0;  //max capacity after which new stack is formed
+  int maxCols=0;
+  int topCol=0; //the column of the stack
+  int topRow=0;
   int **data;
   public:
   SetOfStacks(int, int);
@@ -69,4 +69,5 @@ int SetOfStacks :: top(){
 
 int main(){
   cout << "Stack Implemented\n";
+  return 0;
 }
